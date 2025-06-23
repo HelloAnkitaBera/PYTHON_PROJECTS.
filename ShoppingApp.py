@@ -100,7 +100,7 @@ class ShoppingApp:
         except ValueError:
             messagebox.showerror("Error", "❌ Enter a valid quantity.")
 
-# Run the app
+
 if __name__ == "__main__":
     root = tk.Tk()
     app = ShoppingApp(root)

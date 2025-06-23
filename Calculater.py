@@ -93,7 +93,7 @@ for (text, row, col, *span) in buttons:
     if text == '=':
         btn = tk.Button(root, text=text, padx=18, pady=20, font=('Arial', 18), command=equal, bg=bg_color, fg=fg_color)
     elif text == '%':
-        btn = tk.Button(root, text=text, padx=16, pady=20, font=('Arial', 18), command=percent, bg=bg_color, fg=fg_color)
+        btn = tk.Button(root, text=text, padx=16, pady=20, font=('Arial', 18), command=percent, bg=bg_color, fg="White")
     elif text == '√':
         btn = tk.Button(root, text=text, padx=22, pady=20, font=('Arial', 18), command=sqrt_func, bg=bg_color, fg=fg_color)
     elif text == 'AC':

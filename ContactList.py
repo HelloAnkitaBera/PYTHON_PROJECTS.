@@ -100,12 +100,12 @@ tk.Button(root, text="Add Contact", command=add_contact, bg="#4CAF50", fg="white
 tk.Label(root, text="Search Contact:").pack()
 search_entry = tk.Entry(root, width=30)
 search_entry.pack()
-tk.Button(root, text="Search", command=search_contact).pack(pady=5)
+tk.Button(root, text="Search", background="violet", fg="white", command=search_contact).pack(pady=5)
 
 contact_list = tk.Listbox(root, width=60)
 contact_list.pack(pady=10)
 
-tk.Button(root, text="View All Contacts", command=view_contacts).pack()
+tk.Button(root, text="View All Contacts",bg="orange", fg="white", command=view_contacts).pack()
 tk.Button(root, text="Update Selected", command=update_contact, bg="#2196F3", fg="white").pack(pady=2)
 tk.Button(root, text="Delete Selected", command=delete_contact, bg="#f44336", fg="white").pack(pady=2)
 

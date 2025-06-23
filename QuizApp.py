@@ -30,7 +30,7 @@ class QuizApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Multi-Page Quiz")
-        self.geometry("800x400")
+        self.geometry("780x380")
         self.resizable(False, False)
         self.answers = {}  
         self.frames = {}
@@ -56,7 +56,7 @@ class QuizApp(tk.Tk):
 class QuestionFrame(tk.Frame):
     def __init__(self, app, q_index):
         super().__init__(app)
-        self.app = app  # app is the QuizApp instance
+        self.app = app  
         self.q_index = q_index
         self.selected = tk.StringVar()
 
@@ -73,7 +73,7 @@ class QuestionFrame(tk.Frame):
                             value=opt[0]).pack(anchor="w", padx=20)
 
        
-        tk.Button(self, text="Next", command=self.next_question, background="green").pack(pady=30)
+        tk.Button(self, text="Next", command=self.next_question, background="green", fg="white").pack(pady=30)
 
     def next_question(self):
         choice = self.selected.get()
@@ -108,7 +108,7 @@ class SummaryFrame(tk.Frame):
 
         tk.Label(self, text=f"Your Score: {score} / {len(questions)}", font=("Arial", 14)).pack(pady=15)
 
-        tk.Button(self, text="Exit", command=self.master.destroy).pack()
+        tk.Button(self, text="Exit", command=self.master.destroy, background="red", fg="white").pack()
 
 
 if __name__ == "__main__":
