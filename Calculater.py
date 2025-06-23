@@ -47,8 +47,7 @@ root = tk.Tk()
 root.title("Simple Calculator")
 root.geometry("293x508")
 root.configure(bg="#18212E")  # Dark gray or any hex color
-
-# root.resizable(False, False)
+root.resizable(False, False)
 
 entry_var = tk.StringVar()
 entry = tk.Entry(root, textvariable=entry_var, font=('Arial', 20), bd=20, insertwidth=2, width=15, borderwidth=4, justify='right')
