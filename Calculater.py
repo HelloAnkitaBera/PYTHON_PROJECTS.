@@ -45,7 +45,7 @@ def sqrt_func():
 # GUI setup
 root = tk.Tk()
 root.title("Simple Calculator")
-root.geometry("295x510")
+root.geometry("293x508")
 root.configure(bg="#18212E")  # Dark gray or any hex color
 
 # root.resizable(False, False)
@@ -95,13 +95,13 @@ for (text, row, col, *span) in buttons:
     elif text == '%':
         btn = tk.Button(root, text=text, padx=16, pady=20, font=('Arial', 18), command=percent, bg=bg_color, fg=fg_color)
     elif text == '√':
-        btn = tk.Button(root, text=text, padx=20, pady=20, font=('Arial', 18), command=sqrt_func, bg=bg_color, fg=fg_color)
+        btn = tk.Button(root, text=text, padx=22, pady=20, font=('Arial', 18), command=sqrt_func, bg=bg_color, fg=fg_color)
     elif text == 'AC':
         btn = tk.Button(root, text=text, padx=12, pady=20, font=('Arial', 18), command=clear, bg=bg_color, fg=fg_color)
     elif text == 'C':
-        btn = tk.Button(root, text=text, padx=20, pady=20, font=('Arial', 18), command=clear_one, bg=bg_color, fg=fg_color)
+        btn = tk.Button(root, text=text, padx=18, pady=20, font=('Arial', 18), command=clear_one, bg=bg_color, fg=fg_color)
     elif text == '.':
-        btn = tk.Button(root, text=text, padx=22, pady=20, font=('Arial', 18), command=lambda: press('.'), bg=bg_color, fg=fg_color)
+        btn = tk.Button(root, text=text, padx=23, pady=20, font=('Arial', 18), command=lambda: press('.'), bg=bg_color, fg=fg_color)
     elif text == '+':
         btn = tk.Button(root, text=text, padx=18, pady=20, font=('Arial', 18), command=lambda t=text: press(t), bg=bg_color, fg=fg_color)
     else:

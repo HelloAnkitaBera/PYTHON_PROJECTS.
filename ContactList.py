@@ -3,12 +3,10 @@ from tkinter import messagebox, simpledialog
 
 contacts = []
 
-
-
 # GUI Setup
 root = tk.Tk()
 root.title("Contact Management System")
-root.geometry("500x625")
+root.geometry("854x650")
 root.config(bg="#f2f2f2")
 
 header = tk.Label(root, text="Contact Book", font=("Helvetica", 16, "bold"), bg="#4682B4", fg="white", pady=10)
@@ -77,7 +75,7 @@ def update_contact():
 
 
 
-tk.Label(root, text="Store Name:").pack()
+tk.Label(root, text="Contact Name:").pack()
 name_entry = tk.Entry(root, width=40)
 name_entry.pack()
 
@@ -90,6 +88,10 @@ email_entry = tk.Entry(root, width=40)
 email_entry.pack()
 
 tk.Label(root, text="Address:").pack()
+address_entry = tk.Entry(root, width=40)
+address_entry.pack()
+
+tk.Label(root, text="Company:").pack()
 address_entry = tk.Entry(root, width=40)
 address_entry.pack()
 

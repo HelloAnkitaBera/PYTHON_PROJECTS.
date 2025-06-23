@@ -30,7 +30,7 @@ class QuizApp(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("Multi-Page Quiz")
-        self.geometry("500x300")
+        self.geometry("800x400")
         self.resizable(False, False)
         self.answers = {}  
         self.frames = {}
@@ -62,10 +62,10 @@ class QuestionFrame(tk.Frame):
 
         question_data = questions[q_index]
         tk.Label(self, text=f"Question {q_index + 1} of {len(questions)}",
-                 font=("Arial", 12)).pack(pady=(10, 5))
+                 font=("Arial", 20)).pack(pady=(10, 5))
 
         tk.Label(self, text=question_data["question"],
-                 font=("Arial", 14)).pack(pady=(5, 15))
+                 font=("Arial", 20)).pack(pady=(5, 15))
 
      
         for opt in question_data["options"]:
@@ -73,7 +73,7 @@ class QuestionFrame(tk.Frame):
                             value=opt[0]).pack(anchor="w", padx=20)
 
        
-        tk.Button(self, text="Next", command=self.next_question, background="green").pack(pady=20)
+        tk.Button(self, text="Next", command=self.next_question, background="green").pack(pady=30)
 
     def next_question(self):
         choice = self.selected.get()
